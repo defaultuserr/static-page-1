@@ -5,9 +5,10 @@
       <div class="navigation-wrapper">
         <v-btn text to="/" class="nav-link">Startseite</v-btn>
         <v-btn text to="/wir-ueber-uns" class="nav-link">Wir über uns</v-btn>
-        <v-btn text to="/schiessstaende" class="nav-link">Schießstände</v-btn>
+        <v-btn text to="/disziplinen" class="nav-link">Schießstände</v-btn>
         <v-btn text to="/veranstaltungen" class="nav-link">Veranstaltungen</v-btn>
         <v-btn text to="/kontakt" class="nav-link">Kontakte</v-btn>
+
       </div>
     </v-app-bar>
 
@@ -31,11 +32,15 @@
     </v-main>
 
     <!-- Footer -->
-    <v-footer class="footer">
+     <v-footer class="footer">
       <v-container>
         <v-row justify="center">
           <v-col cols="12" class="text-center">
             <p>&copy; 2025 Schützenverein "Zum Ziel". Alle Rechte vorbehalten.</p>
+          </v-col>
+          <v-col cols="12" class="text-center footer-links">
+            <router-link to="/impressum" class="footer-link">Impressum</router-link> |
+            <router-link to="/datenschutz" class="footer-link">Datenschutzerklärung</router-link>
           </v-col>
         </v-row>
       </v-container>
@@ -101,8 +106,25 @@ export default {
   padding: 20px 0;
 }
 
+
+
 .footer p {
   margin: 0;
   font-size: 0.9rem;
+  color: white;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-link {
+  color: #90caf9;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }
 </style>
