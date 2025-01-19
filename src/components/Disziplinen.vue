@@ -6,41 +6,41 @@
       Entdecken Sie unsere hochmodernen Schützenstände und die Vielfalt an Disziplinen.
     </p>
 
-    <v-divider class="mb-6"></v-divider>
+    <v-divider class="mb-8"></v-divider>
 
     <!-- Information Section as Plain Text -->
-    <div class="information-section mb-6">
+    <div class="information-section mb-8">
       <h2 class="text-h5 font-weight-bold mb-4">Mindestalter</h2>
-      <p class="text-body-1 mb-6">
+      <p class="text-body-1 mb-8">
         Bei den Luftdruckwaffen gibt es eine Altersbeschränkung. Luftgewehr / Luftpistole erst ab 12 Jahren (mit elterlichem Einverständnis), alle anderen Waffen/Disziplinen erfordern Volljährigkeit.
       </p>
 
       <h2 class="text-h5 font-weight-bold mb-4">Schießbetrieb</h2>
-      <p class="text-body-1 mb-6">
+      <p class="text-body-1 mb-8">
         Der Schützenverein Beispielname stellt für den Trainingsbetrieb Kurzwaffen zur Verfügung. Die meisten Schusswaffen sind erlaubnispflichtig. Ein Bedürfnis dafür kann frühestens nach einem Jahr der Mitgliedschaft befürwortet werden. Voraussetzung ist eine regelmäßige Teilnahme am Schießbetrieb. Vorderlader Kurz oder Langwaffen erfordern den Pulverschein (§27 Sprengstoffgesetz).
       </p>
 
       <h2 class="text-h5 font-weight-bold mb-4">Kurzwaffen</h2>
-      <p class="text-body-1 mb-6">
+      <p class="text-body-1 mb-8">
         Schusswaffen mit einer Gesamtlänge bis 60 cm, früher als Faustfeuerwaffen bezeichnet. Hierzu gehören Pistolen und Revolver in den normalen Ausführungen. Die gesetzlichen Bestimmungen für Kurzwaffen sind im Allgemeinen strenger als für Langwaffen, weil Erstere eine größere Gefahr darstellen wegen der Möglichkeit, sie verborgen zu tragen.
       </p>
 
       <h2 class="text-h5 font-weight-bold mb-4">Langwaffen</h2>
-      <p class="text-body-1 mb-6">
+      <p class="text-body-1 mb-8">
         Zur Klarstellung der Begriffe wurde im Bundeswaffengesetz festgelegt, dass Schusswaffen mit einer Länge von mehr als 60 cm als Langwaffen bezeichnet werden.
       </p>
 
       <h2 class="text-h5 font-weight-bold mb-4">Sportordnungen</h2>
-      <p class="text-body-1 mb-6">
+      <p class="text-body-1 mb-8">
         Ausschlaggebend bei den Disziplinen sind immer die dazugehörigen Sportordnungen DSB, BDS, BSSB und die jeweiligen Wettkampfordnungen.
       </p>
     </div>
 
-    <v-divider class="mb-6"></v-divider>
+    <v-divider class="mb-8"></v-divider>
 
     <!-- Schießstände: Luftgewehr -->
-    <h2 class="category-title text-center text-h5 mb-4">Luftgewehrstände</h2>
-    <v-row class="tight-grid">
+    <h2 class="category-title text-center text-h5 mb-6">Luftgewehrstände</h2>
+    <v-row class="tight-grid mb-8">
       <v-col cols="12" sm="6" md="4" class="tight-card">
         <v-card class="stand-card">
           <v-img src="/path/to/image1.jpg" class="stand-image" contain></v-img>
@@ -64,11 +64,11 @@
       </v-col>
     </v-row>
 
-    <v-divider class="mb-6"></v-divider>
+    <v-divider class="mb-8"></v-divider>
 
     <!-- Schießstände: Kurzwaffen -->
-    <h2 class="category-title text-center text-h5 mb-4">Kurzwaffenstände</h2>
-    <v-row class="tight-grid">
+    <h2 class="category-title text-center text-h5 mb-6">Kurzwaffenstände</h2>
+    <v-row class="tight-grid mb-8">
       <v-col cols="12" sm="6" md="4" class="tight-card">
         <v-card class="stand-card">
           <v-img src="/path/to/image2.jpg" class="stand-image" contain></v-img>
@@ -85,11 +85,11 @@
       </v-col>
     </v-row>
 
-    <v-divider class="mb-6"></v-divider>
+    <v-divider class="mb-8"></v-divider>
 
     <!-- Disziplinen: BSSB -->
-    <h2 class="category-title text-center text-h5 mb-4">Unsere Disziplinen BSSB</h2>
-    <v-row class="tight-grid">
+    <h2 class="category-title text-center text-h5 mb-6">Unsere Disziplinen BSSB</h2>
+    <v-row class="tight-grid mb-8">
       <v-col cols="12" sm="6" md="4" class="tight-card">
         <v-card class="discipline-card">
           <v-img src="/images/bssb_scheibenarten.jpg" class="stand-image"></v-img>
@@ -107,8 +107,8 @@
     </v-row>
 
     <!-- Disziplinen: BDS -->
-    <h2 class="category-title text-center text-h5 mb-4">Unsere Disziplinen BDS</h2>
-    <v-row class="tight-grid">
+    <h2 class="category-title text-center text-h5 mb-6">Unsere Disziplinen BDS</h2>
+    <v-row class="tight-grid mb-8">
       <v-col cols="12" sm="6" md="4" class="tight-card">
         <v-card class="discipline-card">
           <v-img src="/images/bds_uebersicht.jpg" class="stand-image"></v-img>
@@ -134,8 +134,7 @@
       <v-col cols="12" sm="6" md="4" class="tight-card">
         <v-card class="discipline-card">
           <v-img src="/images/bds_speed.jpg" class="stand-image"></v-img>
-          <v-card-title>BDS
-          Disziplin Speed-Schießen</v-card-title>
+          <v-card-title>BDS Disziplin Speed-Schießen</v-card-title>
           <v-btn text href="/docs/BDS_Disziplin_Speed_Schiessen.pdf" target="_blank">BDS Disziplin Speed-Schießen.pdf</v-btn>
         </v-card>
       </v-col>
@@ -165,7 +164,7 @@ export default {
 .tight-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 24px;
 }
 
 .tight-card {

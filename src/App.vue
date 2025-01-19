@@ -4,9 +4,10 @@
     <v-app-bar app color="primary" dense>
       <div class="navigation-wrapper">
         <v-btn text to="/" class="nav-link">Startseite</v-btn>
-        <v-btn text to="/wir-ueber-uns" class="nav-link">Wir über uns</v-btn>
+        <v-btn text to="/ueber-uns" class="nav-link">Wir über uns</v-btn>
         <v-btn text to="/disziplinen" class="nav-link">Schießstände</v-btn>
         <v-btn text to="/kontakt" class="nav-link">Kontakte</v-btn>
+         <v-btn text to="/ueber-uns" class="nav-link">Über uns</v-btn>
          <v-btn text to="/termine" class="nav-link">Termine und Formulare</v-btn>
 
       </div>
