@@ -6,9 +6,16 @@
           <v-card-title class="text-h4">Kontakt</v-card-title>
           <v-card-text>
             <p class="text-body-1">
-              <strong>E-Mail:</strong> info@schuetzenverein-zumziel.de <br />
-              <strong>Telefon:</strong> +49 123 456 7890 <br />
-              <strong>Adresse:</strong> Schützenstraße 10, 12345 Musterstadt
+              <strong>Anschrift:</strong><br />
+              SV GlückAuf<br />
+              An Der Straße 15<br />
+              99999 Beispielstadt<br /><br />
+
+              <strong>Telefon:</strong><br />
+              (2. Schützenmeister): 0113/3342342<br /><br />
+
+              <strong>E-Mail:</strong><br />
+              <a href="mailto:info@beispileemail.de">info@beispielemail.de</a>
             </p>
           </v-card-text>
         </v-card>
@@ -23,7 +30,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .contact-card {
   padding: 24px;
   border-radius: 12px;
