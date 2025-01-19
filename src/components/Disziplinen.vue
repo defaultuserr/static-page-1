@@ -43,21 +43,21 @@
     <v-row class="tight-grid mb-8">
       <v-col cols="12" sm="6" md="4" class="tight-card">
         <v-card class="stand-card">
-          <v-img src="/path/to/image1.jpg" class="stand-image" contain></v-img>
+          <v-img src="/kurzwaffe25.png" class="stand-image" contain></v-img>
           <v-card-title>10-Meter-Luftgewehrstand</v-card-title>
           <v-card-text>Beschreibung des Schießstandes.</v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="4" class="tight-card">
         <v-card class="stand-card">
-          <v-img src="/path/to/image3.jpg" class="stand-image" contain></v-img>
+          <v-img src="/kurzwaffe25.png" class="stand-image" contain></v-img>
           <v-card-title>50-Meter-Kleinkaliberstand</v-card-title>
           <v-card-text>Beschreibung des Kleinkaliberstandes.</v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="4" class="tight-card">
         <v-card class="stand-card">
-          <v-img src="/path/to/image4.jpg" class="stand-image" contain></v-img>
+          <v-img src="/kurzwaffe25.png" class="stand-image" contain></v-img>
           <v-card-title>300-Meter-Großkaliberstand</v-card-title>
           <v-card-text>Beschreibung des Großkaliberstandes.</v-card-text>
         </v-card>
