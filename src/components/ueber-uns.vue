@@ -9,10 +9,10 @@
     ></v-img>
 
     <h1 class="text-h4 section-title mb-6 text-center">
-      Königliche privilegierte Feuerschützengesellschaft Hengersberg
+      Schützenverein Unterfranking
     </h1>
     <p class="text-body-1 section-description text-center mb-8">
-      Der älteste Verein im ältesten Markt Bayern
+      Der größte Verein im ältesten Markt Bayern
     </p>
 
     <v-divider class="mb-6"></v-divider>
@@ -69,7 +69,7 @@
                 alt="1. Schützenmeister - Christian Reisinger"
               />
             </div>
-            <strong>1. Schützenmeister:</strong> Christian Reisinger
+            <strong>1. Schützenmeister: </strong> Christian Reisinger
           </li>
           <li>
             <div class="profile-image">
@@ -78,16 +78,16 @@
                 alt="2. Schützenmeister - Andreas Art"
               />
             </div>
-            <strong>2. Schützenmeister:</strong> Andreas Art
+            <strong>2. Schützenmeister: </strong> Andreas Name
           </li>
           <li>
             <div class="profile-image">
               <img
                 src="/mann.jpg"
-                alt="Schatzmeister - Thomas Leiß"
+                alt="Schatzmeister - Thomas Name"
               />
             </div>
-            <strong>Schatzmeister:</strong> Thomas Leiß
+            <strong>Schatzmeister: </strong> Thomas Name
           </li>
         </ul>
       </v-card-text>
@@ -98,6 +98,7 @@
       <v-card-title class="text-h5">Satzung</v-card-title>
       <v-card-text>
         <p>Unsere aktuelle Satzung steht Ihnen als PDF-Dokument zur Verfügung:</p>
+        <br>
         <v-btn
           color="primary"
           text

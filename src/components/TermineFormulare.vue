@@ -11,6 +11,8 @@
     <v-card outlined class="mb-4">
       <v-card-title class="text-h5">Terminplan 2025</v-card-title>
       <v-card-text>
+        <p>Hier finden Sie alle geplanten Veranstaltungen und Termine für das Jahr 2025:</p>
+        <br>
         <v-btn color="primary" text href="/pdf/test.pdf" target="_blank">Terminplan 2025 herunterladen</v-btn>
       </v-card-text>
     </v-card>
@@ -20,8 +22,11 @@
       <v-card-title class="text-h5">Formulare</v-card-title>
       <v-card-text>
         <ul class="form-list">
-          <li><v-btn color="primary" text href="/pdf/test.pdf" target="_blank">Antrag auf Mitgliedschaft</v-btn></li>
-    
+          <li>
+            <p>Um Mitglied unseres Vereins zu werden, füllen Sie bitte den Mitgliedsantrag aus:</p>
+            <br>
+            <v-btn color="primary" text href="/pdf/test.pdf" target="_blank">Antrag auf Mitgliedschaft</v-btn>
+          </li>
         </ul>
       </v-card-text>
     </v-card>
@@ -30,6 +35,7 @@
     <v-card outlined class="mb-4">
       <v-card-title class="text-h5">Schießtage 2025</v-card-title>
       <v-card-text>
+        <p>Alle geplanten Schießtage für das Jahr 2025 können Sie hier einsehen:</p>
         <ul class="schedule-list">
           <li v-for="(item, index) in termine" :key="index">
             <span class="date">{{ item.date }}</span>

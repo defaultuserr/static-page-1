@@ -92,10 +92,8 @@
     <v-row class="tight-grid mb-8">
       <v-col cols="12" sm="6" md="4" class="tight-card">
         <v-card class="discipline-card">
-          <v-img src="/images/bssb_scheibenarten.jpg" class="stand-image"></v-img>
-          <v-card-title>Scheibenarten</v-card-title>
-          <v-card-text>Präzision</v-card-text>
-          <v-btn text href="/docs/Uebersicht_BSSB.pdf" target="_blank">Übersicht BSSB.pdf</v-btn>
+          <v-img src="/images/bssb_duell.jpg" class="stand-image"></v-img>
+          <v-card-title>Präzision</v-card-title>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="4" class="tight-card">
@@ -106,39 +104,14 @@
       </v-col>
     </v-row>
 
-    <!-- Disziplinen: BDS -->
-    <h2 class="category-title text-center text-h5 mb-6">Unsere Disziplinen BDS</h2>
-    <v-row class="tight-grid mb-8">
-      <v-col cols="12" sm="6" md="4" class="tight-card">
-        <v-card class="discipline-card">
-          <v-img src="/images/bds_uebersicht.jpg" class="stand-image"></v-img>
-          <v-card-title>BDS Übersicht Disziplinen und Scheiben</v-card-title>
-          <v-card-text>Präzision und Kombi</v-card-text>
-          <v-btn text href="/docs/BDS_Disziplinen_und_Scheiben.pdf" target="_blank">BDS Übersicht Disziplinen.pdf</v-btn>
-        </v-card>
-      </v-col>
-      <v-col cols="12" sm="6" md="4" class="tight-card">
-        <v-card class="discipline-card">
-          <v-img src="/images/bds_fallscheiben.jpg" class="stand-image"></v-img>
-          <v-card-title>BDS Disziplin Fallscheiben</v-card-title>
-          <v-btn text href="/docs/BDS_Disziplin_Fallscheiben.pdf" target="_blank">BDS Disziplin Fallscheiben.pdf</v-btn>
-        </v-card>
-      </v-col>
-      <v-col cols="12" sm="6" md="4" class="tight-card">
-        <v-card class="discipline-card">
-          <v-img src="/images/bds_kurzwaffe_25m.jpg" class="stand-image"></v-img>
-          <v-card-title>BDS Disziplin Kurzwaffe 25m</v-card-title>
-          <v-btn text href="/docs/BDS_Disziplin_Kurzwaffe_25m.pdf" target="_blank">BDS Disziplin Kurzwaffe 25m.pdf</v-btn>
-        </v-card>
-      </v-col>
-      <v-col cols="12" sm="6" md="4" class="tight-card">
-        <v-card class="discipline-card">
-          <v-img src="/images/bds_speed.jpg" class="stand-image"></v-img>
-          <v-card-title>BDS Disziplin Speed-Schießen</v-card-title>
-          <v-btn text href="/docs/BDS_Disziplin_Speed_Schiessen.pdf" target="_blank">BDS Disziplin Speed-Schießen.pdf</v-btn>
-        </v-card>
-      </v-col>
-    </v-row>
+ <div class="text-center mb-8">
+      <p class="text-body-1 mb-4">
+        Eine vollständige Übersicht aller Disziplinen des BSSB finden Sie im folgenden PDF-Dokument:
+      </p>
+      <v-btn color="primary" text href="/pdf/bssb_disziplinen.pdf" target="_blank">
+        Disziplinen BSSB herunterladen
+      </v-btn>
+    </div>
   </v-container>
 </template>
 

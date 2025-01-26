@@ -23,7 +23,7 @@
               Wir freuen uns, Euch auf unserer Website begrüßen zu dürfen! Hier könnt Ihr einen Einblick in unseren traditionsreichen Verein erhalten. Erfahrt mehr über unsere Angebote, Veranstaltungen und die Freude am Schießsport. Wir laden Euch herzlich ein, uns an Schießtagen zu besuchen oder uns über das Kontaktformular zu erreichen.
             </p>
 
-            <v-btn color="primary" large class="mb-6" href="/contact">Jetzt Kontakt aufnehmen</v-btn>
+            <v-btn color="primary" large class="mb-6" href="/kontakt">Jetzt Kontakt aufnehmen</v-btn>
 
             <p class="text-body-1 text-justify mb-6">
               Probiert es selbst und entdeckt die Begeisterung für den Schießsport! Informiert Euch über unser vielfältiges Angebot: von Luftpistolen und -gewehren bis hin zu Kleinkaliber- und großkalibrigen Handfeuerwaffen, Unterhebel-Repetiergewehren sowie Schwarzpulver-Vorderladerwaffen. Unsere moderne Schießanlage steht Euch für ein unverbindliches Probetraining zur Verfügung – inklusive Leihwaffen und Ausrüstung. Unsere erfahrenen Schützen stehen Euch mit Rat und Tat zur Seite.
