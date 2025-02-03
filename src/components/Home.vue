@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="home-container">
     <!-- Willkommensbanner -->
     <v-row justify="center">
       <v-col cols="12">
@@ -13,7 +13,7 @@
 
     <!-- Haupttext und Inhalte -->
     <v-row justify="center">
-      <v-col cols="12" md="8">
+      <v-col cols="12" md="10" lg="8">
         <v-card class="welcome-card">
           <v-card-title class="text-h4 text-center font-weight-bold mb-6">
             Willkommen bei der Schützenvereinigung "Zum Eichenwald"
@@ -23,7 +23,9 @@
               Wir freuen uns, Euch auf unserer Website begrüßen zu dürfen! Hier könnt Ihr einen Einblick in unseren traditionsreichen Verein erhalten. Erfahrt mehr über unsere Angebote, Veranstaltungen und die Freude am Schießsport. Wir laden Euch herzlich ein, uns an Schießtagen zu besuchen oder uns über das Kontaktformular zu erreichen.
             </p>
 
-            <v-btn color="primary" large class="mb-6" href="/kontakt">Jetzt Kontakt aufnehmen</v-btn>
+            <div class="text-center mb-6">
+              <v-btn color="primary" large href="/kontakt">Jetzt Kontakt aufnehmen</v-btn>
+            </div>
 
             <p class="text-body-1 text-justify mb-6">
               Probiert es selbst und entdeckt die Begeisterung für den Schießsport! Informiert Euch über unser vielfältiges Angebot: von Luftpistolen und -gewehren bis hin zu Kleinkaliber- und großkalibrigen Handfeuerwaffen, Unterhebel-Repetiergewehren sowie Schwarzpulver-Vorderladerwaffen. Unsere moderne Schießanlage steht Euch für ein unverbindliches Probetraining zur Verfügung – inklusive Leihwaffen und Ausrüstung. Unsere erfahrenen Schützen stehen Euch mit Rat und Tat zur Seite.
@@ -32,7 +34,7 @@
             <v-divider class="my-6"></v-divider>
 
             <h2 class="text-h5 text-center font-weight-medium mb-4">Schießtage</h2>
-            <v-row>
+            <v-row align="center">
               <v-col cols="12" md="8">
                 <p class="text-body-1 text-justify mb-6">
                   <strong>Freitags:</strong> Ab 19:00 Uhr ist das Schützenheim geöffnet. Wir freuen uns auf Euren Besuch!<br />
@@ -63,11 +65,18 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: "Home",
 };
 </script>
 
 <style scoped>
+/* Ensure consistent width with other components */
+.home-container {
+  max-width: 1200px; /* Same width as other components */
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .welcome-card {
   padding: 32px;
   border-radius: 16px;
@@ -83,9 +92,9 @@ export default {
   border-radius: 16px;
 }
 
-.schuetzenheim-image {
+.schuetzenheim-image-large {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
   border-radius: 16px;
 }
@@ -117,11 +126,4 @@ export default {
 .my-6 {
   margin: 32px 0;
 }
-.schuetzenheim-image-large {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
 </style>

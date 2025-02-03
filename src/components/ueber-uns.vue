@@ -66,10 +66,10 @@
             <div class="profile-image">
               <img
                 src="/mann.jpg"
-                alt="1. Schützenmeister - Christian Reisinger"
+                alt="1. Schützenmeister - Christian Name"
               />
             </div>
-            <strong>1. Schützenmeister: </strong> Christian Reisinger
+            <strong>1. Schützenmeister: </strong> Christian Name
           </li>
           <li>
             <div class="profile-image">
