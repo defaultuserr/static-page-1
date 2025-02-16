@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="8" lg="6"> 
         <v-card class="contact-card">
           <v-card-title class="text-h4">Kontakt</v-card-title>
           <v-card-text>

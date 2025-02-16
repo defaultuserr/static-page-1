@@ -1,51 +1,55 @@
 <template>
   <v-container class="termine-container">
-    <h1 class="text-h4 section-title mb-6 text-center">Termine & Formulare</h1>
-    <p class="text-body-1 section-description text-center mb-8">
-      Alle wichtigen Termine und Formulare auf einen Blick.
-    </p>
+    <v-row justify="center">
+      <v-col cols="12" md="10" lg="8">
+        <h1 class="text-h4 section-title mb-6 text-center">Termine & Formulare</h1>
+        <p class="text-body-1 section-description text-center mb-8">
+          Alle wichtigen Termine und Formulare auf einen Blick.
+        </p>
 
-    <v-divider class="mb-6"></v-divider>
+        <v-divider class="mb-6"></v-divider>
 
-    <!-- Terminplan -->
-    <v-card outlined class="mb-4">
-      <v-card-title class="text-h5">Terminplan 2025</v-card-title>
-      <v-card-text>
-        <p>Hier finden Sie alle geplanten Veranstaltungen und Termine für das Jahr 2025:</p>
-        <br>
-        <v-btn color="primary" text href="/pdf/test.pdf" target="_blank">Terminplan 2025 herunterladen</v-btn>
-      </v-card-text>
-    </v-card>
-
-    <!-- Formulare -->
-    <v-card outlined class="mb-4">
-      <v-card-title class="text-h5">Formulare</v-card-title>
-      <v-card-text>
-        <ul class="form-list">
-          <li>
-            <p>Um Mitglied unseres Vereins zu werden, füllen Sie bitte den Mitgliedsantrag aus:</p>
+        <!-- Terminplan -->
+        <v-card outlined class="mb-4">
+          <v-card-title class="text-h5">Terminplan 2025</v-card-title>
+          <v-card-text>
+            <p>Hier finden Sie alle geplanten Veranstaltungen und Termine für das Jahr 2025:</p>
             <br>
-            <v-btn color="primary" text href="/pdf/test.pdf" target="_blank">Antrag auf Mitgliedschaft</v-btn>
-          </li>
-        </ul>
-      </v-card-text>
-    </v-card>
+            <v-btn color="primary" text href="/pdf/test.pdf" target="_blank">Terminplan 2025 herunterladen</v-btn>
+          </v-card-text>
+        </v-card>
 
-    <!-- Schießtage -->
-    <v-card outlined class="mb-4">
-      <v-card-title class="text-h5">Schießtage 2025</v-card-title>
-      <v-card-text>
-        <p>Alle geplanten Schießtage für das Jahr 2025 können Sie hier einsehen:</p>
-        <ul class="schedule-list">
-          <li v-for="(item, index) in termine" :key="index">
-            <span class="date">{{ item.date }}</span>
-            <div class="description">
-              <span v-for="(line, lineIndex) in item.description" :key="lineIndex">{{ line }}</span>
-            </div>
-          </li>
-        </ul>
-      </v-card-text>
-    </v-card>
+        <!-- Formulare -->
+        <v-card outlined class="mb-4">
+          <v-card-title class="text-h5">Formulare</v-card-title>
+          <v-card-text>
+            <ul class="form-list">
+              <li>
+                <p>Um Mitglied unseres Vereins zu werden, füllen Sie bitte den Mitgliedsantrag aus:</p>
+                <br>
+                <v-btn color="primary" text href="/pdf/test.pdf" target="_blank">Antrag auf Mitgliedschaft</v-btn>
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
+
+        <!-- Schießtage -->
+        <v-card outlined class="mb-4">
+          <v-card-title class="text-h5">Schießtage 2025</v-card-title>
+          <v-card-text>
+            <p>Alle geplanten Schießtage für das Jahr 2025 können Sie hier einsehen:</p>
+            <ul class="schedule-list">
+              <li v-for="(item, index) in termine" :key="index">
+                <span class="date">{{ item.date }}</span>
+                <div class="description">
+                  <span v-for="(line, lineIndex) in item.description" :key="lineIndex">{{ line }}</span>
+                </div>
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -73,6 +77,8 @@ export default {
 
 <style scoped>
 .termine-container {
+
+  margin: 0 auto;
   padding: 20px;
 }
 

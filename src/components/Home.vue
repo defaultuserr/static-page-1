@@ -13,7 +13,7 @@
 
     <!-- Haupttext und Inhalte -->
     <v-row justify="center">
-      <v-col cols="12" md="10" lg="8">
+      <v-col cols="18" md="18" lg="18">
         <v-card class="welcome-card">
           <v-card-title class="text-h4 text-center font-weight-bold mb-6">
             Willkommen bei der Schützenvereinigung "Zum Eichenwald"
