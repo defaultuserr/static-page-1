@@ -6,9 +6,8 @@
         <v-btn text to="/" class="nav-link">Startseite</v-btn>
         <v-btn text to="/disziplinen" class="nav-link">Schießstände</v-btn>
         <v-btn text to="/kontakt" class="nav-link">Kontakte</v-btn>
-         <v-btn text to="/ueber-uns" class="nav-link">Über uns</v-btn>
-         <v-btn text to="/termine" class="nav-link">Termine und Formulare</v-btn>
-
+        <v-btn text to="/ueber-uns" class="nav-link">Über uns</v-btn>
+        <v-btn text to="/termine" class="nav-link">Termine und Formulare</v-btn>
       </div>
     </v-app-bar>
 
@@ -18,10 +17,16 @@
         src="/emblem.png"
         alt="Schützenverein Emblem"
         class="logo"
-        max-height="150"
-        max-width="150"
+        max-width="150px"
+        height="auto"
         contain
-      ></v-img>
+        :lazy-src="'/emblem_small.png'"
+        :aspect-ratio="1"
+      >
+        <template v-slot:placeholder>
+          <v-skeleton-loader type="image" class="skeleton-logo"></v-skeleton-loader>
+        </template>
+      </v-img>
     </div>
 
     <!-- Main Content -->
@@ -32,7 +37,7 @@
     </v-main>
 
     <!-- Footer -->
-     <v-footer class="footer">
+    <v-footer class="footer">
       <v-container>
         <v-row justify="center">
           <v-col cols="12" class="text-center">
@@ -54,12 +59,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 /* Navigation Bar */
 .v-app-bar {
-  background-color: #1976d2; /* Primary color */
+  background-color: #1976d2;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky; /* Keep navbar at the top */
+  position: sticky;
   top: 0;
   z-index: 10;
 }
@@ -67,7 +72,8 @@ export default {
 .navigation-wrapper {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .nav-link {
@@ -80,7 +86,7 @@ export default {
 }
 
 .nav-link:hover {
-  color: #90caf9; /* Light blue hover effect */
+  color: #90caf9;
 }
 
 /* Emblem Section */
@@ -88,15 +94,23 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5f5; /* Light background for contrast */
+  background-color: #f5f5f5;
   padding: 24px;
-  margin-top: 64px; /* Adjust for navbar height to ensure visibility */
-  border-bottom: 2px solid #ddd; /* Separates emblem from the content */
+  margin-top: 64px;
+  border-bottom: 2px solid #ddd;
 }
 
 .logo {
   border-radius: 50%;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for emphasis */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 150px;
+  height: auto;
+}
+
+.skeleton-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
 /* Footer */
@@ -106,12 +120,9 @@ export default {
   padding: 20px 0;
 }
 
-
-
 .footer p {
   margin: 0;
   font-size: 0.9rem;
-  color: white;
 }
 
 .footer-links {
@@ -126,5 +137,27 @@ export default {
 
 .footer-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .navigation-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+  .emblem-container {
+    padding: 16px;
+    margin-top: 32px;
+  }
+  .logo {
+    max-width: 80px;
+  }
+  .skeleton-logo {
+    width: 80px;
+    height: 80px;
+  }
 }
 </style>

@@ -7,13 +7,20 @@
           src="schützenverein.jpg"
           alt="Schützenvereinigung Zum Eichenwald"
           class="banner-image mb-6"
-        ></v-img>
+          max-width="100%"
+          height="auto"
+          :lazy-src="'schuetzenverein_small.jpg'"
+        >
+          <template v-slot:placeholder>
+            <v-skeleton-loader type="image" class="skeleton-banner"></v-skeleton-loader>
+          </template>
+        </v-img>
       </v-col>
     </v-row>
 
     <!-- Haupttext und Inhalte -->
     <v-row justify="center">
-      <v-col cols="18" md="18" lg="18">
+      <v-col cols="12" sm="12" md="12" lg="12">
         <v-card class="welcome-card">
           <v-card-title class="text-h4 text-center font-weight-bold mb-6">
             Willkommen bei der Schützenvereinigung "Zum Eichenwald"
@@ -46,7 +53,12 @@
                   src="schützenheim.jpg"
                   alt="Schützenheim Zum Eichenwald"
                   class="schuetzenheim-image-large rounded"
-                ></v-img>
+                  :lazy-src="'schuetzenheim_small.jpg'"
+                >
+                  <template v-slot:placeholder>
+                    <v-skeleton-loader type="image" class="skeleton-image"></v-skeleton-loader>
+                  </template>
+                </v-img>
               </v-col>
             </v-row>
 
@@ -70,9 +82,8 @@ export default {
 </script>
 
 <style scoped>
-/* Ensure consistent width with other components */
 .home-container {
-  max-width: 1200px; /* Same width as other components */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -82,7 +93,6 @@ export default {
   border-radius: 16px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
   background-color: #f9f9f9;
-  color: #333;
 }
 
 .banner-image {
@@ -99,31 +109,21 @@ export default {
   border-radius: 16px;
 }
 
-.text-center {
-  text-align: center;
+.skeleton-banner, .skeleton-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
 }
 
-.text-justify {
-  text-align: justify;
-}
-
-.font-weight-bold {
-  font-weight: bold;
-}
-
-.font-weight-medium {
-  font-weight: 500;
-}
-
-.mb-4 {
-  margin-bottom: 24px;
-}
-
-.mb-6 {
-  margin-bottom: 32px;
-}
-
-.my-6 {
-  margin: 32px 0;
+@media (max-width: 600px) {
+  .banner-image {
+    height: 200px;
+  }
+  .skeleton-banner, .skeleton-image {
+    height: 200px;
+  }
+  .welcome-card {
+    padding: 16px;
+  }
 }
 </style>

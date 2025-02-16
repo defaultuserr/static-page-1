@@ -15,58 +15,35 @@
     <!-- Allgemeine Informationen -->
     <v-card outlined class="mb-4">
       
-      <v-card-title class="text-h5">
-        <v-icon class="mr-2" color="primary">mdi-information-outline</v-icon>
-        Allgemeine Informationen
-      </v-card-title>
+      <v-card-title class="text-h5">Allgemeine Informationen</v-card-title>
 
       <!-- Mindestalter -->
       <v-card class="info-section mb-6" outlined>
-        <v-card-title class="info-title">
-          <v-icon class="mr-3" color="blue" size="30">mdi-account-child</v-icon>
-          Mindestalter
-        </v-card-title>
-
+        <v-card-title class="info-title">Mindestalter</v-card-title>
         <v-card-text>
           <p>Bei den Luftdruckwaffen gibt es eine Altersbeschränkung:</p>
           <ul class="info-list">
-            <li>
-              <strong>Luftgewehr / Luftpistole:</strong> ab 12 Jahren (mit elterlichem Einverständnis).
-            </li>
-            <li>
-              <strong>Alle anderen Waffen & Disziplinen:</strong> Volljährigkeit erforderlich.
-            </li>
+            <li><strong>Luftgewehr / Luftpistole:</strong> ab 12 Jahren (mit elterlichem Einverständnis).</li>
+            <li><strong>Alle anderen Waffen & Disziplinen:</strong> Volljährigkeit erforderlich.</li>
           </ul>
         </v-card-text>
       </v-card>
 
       <!-- Schießbetrieb -->
       <v-card class="info-section mb-6" outlined>
-        <v-card-title class="info-title">
-          <v-icon class="mr-3" color="green" size="30">mdi-target</v-icon>
-          Schießbetrieb
-        </v-card-title>
-
+        <v-card-title class="info-title">Schießbetrieb</v-card-title>
         <v-card-text>
           <p>Der Schützenverein Beispielname stellt für den Trainingsbetrieb Kurzwaffen zur Verfügung.</p>
           <ul class="info-list">
-            <li>
-              <strong>Voraussetzung:</strong> Regelmäßige Teilnahme am Schießbetrieb.
-            </li>
-            <li>
-              <strong>Vorderlader:</strong> Erfordert den Pulverschein (§27 Sprengstoffgesetz).
-            </li>
+            <li><strong>Voraussetzung:</strong> Regelmäßige Teilnahme am Schießbetrieb.</li>
+            <li><strong>Vorderlader:</strong> Erfordert den Pulverschein (§27 Sprengstoffgesetz).</li>
           </ul>
         </v-card-text>
       </v-card>
 
       <!-- Sportordnungen -->
       <v-card class="info-section" outlined>
-        <v-card-title class="info-title">
-          <v-icon class="mr-3" color="orange" size="30">mdi-book-open-page-variant</v-icon>
-          Sportordnungen
-        </v-card-title>
-
+        <v-card-title class="info-title">Sportordnungen</v-card-title>
         <v-card-text>
           <p>Ausschlaggebend bei den Disziplinen sind immer die dazugehörigen Sportordnungen:</p>
           <ul class="info-list">
@@ -77,7 +54,6 @@
           </ul>
         </v-card-text>
       </v-card>
-
     </v-card>
 
     <v-divider class="mb-8"></v-divider>
@@ -90,7 +66,11 @@
     <v-row class="tight-grid mb-8">
       <v-col cols="12" md="6" lg="4" class="tight-card">
         <v-card class="stand-card">
-          <v-img src="/kurzwaffe25.png" class="stand-image" contain></v-img>
+          <v-img src="/kurzwaffe25.png" class="stand-image" :lazy-src="'kurzwaffe25_small.png'">
+            <template v-slot:placeholder>
+              <v-skeleton-loader type="image" class="skeleton-image"></v-skeleton-loader>
+            </template>
+          </v-img>
           <v-card-title>10-Meter-Luftgewehrstand</v-card-title>
           <v-card-text>Ideal für Präzisionsschießen mit Luftdruckwaffen.</v-card-text>
         </v-card>
@@ -98,7 +78,11 @@
 
       <v-col cols="12" md="6" lg="4" class="tight-card">
         <v-card class="stand-card">
-          <v-img src="/kurzwaffe25.png" class="stand-image" contain></v-img>
+          <v-img src="/10meterluftgewehr.png" class="stand-image" :lazy-src="'kurzwaffe50_small.png'">
+            <template v-slot:placeholder>
+              <v-skeleton-loader type="image" class="skeleton-image"></v-skeleton-loader>
+            </template>
+          </v-img>
           <v-card-title>50-Meter-Kleinkaliberstand</v-card-title>
           <v-card-text>Perfekt für Kleinkalibergewehre und das sportliche Training.</v-card-text>
         </v-card>
@@ -116,7 +100,11 @@
       <v-col cols="12" sm="6" md="4" class="tight-card">
         <a href="https://www.bssb.de/sport/disziplinen/pistole" target="_blank" class="card-link">
           <v-card class="discipline-card" outlined hover>
-            <v-img src="/scheiben/Disziplin-präzision.png" class="stand-image"></v-img>
+            <v-img src="/scheiben/Disziplin-präzision.png" class="stand-image" :lazy-src="'disziplin_praezision_small.png'">
+              <template v-slot:placeholder>
+                <v-skeleton-loader type="image" class="skeleton-image"></v-skeleton-loader>
+              </template>
+            </v-img>
             <v-card-title>Präzision</v-card-title>
           </v-card>
         </a>
@@ -162,40 +150,10 @@ export default {
   color: #555;
 }
 
-/* Ensure .info-section cards are full width */
-.info-section {
-  width: 100% !important;
-  max-width: 100% !important;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  box-sizing: border-box;
-}
-
-/* Move text slightly to the right */
-.info-section .v-card-text {
+.skeleton-image {
   width: 100%;
-  padding: 16px 32px; /* Increased left padding */
-  box-sizing: border-box;
-}
-
-/* General text alignment */
-p, ul {
-  margin: 0;
-  padding: 0;
-}
-
-.stand-card,
-.discipline-card {
-  width: 100%;
-  max-width: 400px;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ddd;
+  height: 250px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .stand-image {
@@ -205,19 +163,9 @@ p, ul {
   border-bottom: 1px solid #ddd;
 }
 
-.category-title {
-  font-weight: bold;
-  color: #333;
-}
-
-@media (min-width: 1200px) {
-  .stand-card,
-  .discipline-card {
-    max-width: 300px;
+@media (max-width: 600px) {
+  .skeleton-image {
+    height: 180px;
   }
-}
-
-.card-link {
-  text-decoration: none;
 }
 </style>
