@@ -1,16 +1,14 @@
 <template>
   <v-container class="schuetzen-container">
     <!-- Zentrales Bild mit Skeleton Loader -->
-    <v-img
-      src="/alterverein.jpg"
-      alt="Schützenverein Emblem"
-      class="header-image"
-      contain
-    >
-      <template v-slot:placeholder>
-        <v-skeleton-loader type="image" class="skeleton-image"></v-skeleton-loader>
-      </template>
-    </v-img>
+    <div class="image-wrapper">
+      <v-img v-show="headerImageLoaded" :src="headerImage" alt="Schützenverein Emblem" class="header-image">
+        <template v-slot:default>
+          <img :src="headerImage" class="hidden-img" @load="onHeaderImageLoad" />
+        </template>
+      </v-img>
+      <v-skeleton-loader v-show="!headerImageLoaded" class="skeleton-image"></v-skeleton-loader>
+    </div>
 
     <h1 class="text-h4 section-title mb-6 text-center font-weight-bold">
       Schützenverein Unterfranking
@@ -39,35 +37,16 @@
       <v-card-title class="text-h5 font-weight-medium">Vorstandschaft</v-card-title>
       <v-card-text>
         <ul class="board-list">
-          <li>
+          <li v-for="(member, index) in boardMembers" :key="index">
             <div class="profile-image">
-              <v-img src="/mann.jpg" alt="1. Schützenmeister - Christian Name">
-                <template v-slot:placeholder>
-                  <v-skeleton-loader type="image" class="skeleton-image"></v-skeleton-loader>
+              <v-img v-show="profileImagesLoaded[index]" :src="member.image" :alt="member.name">
+                <template v-slot:default>
+                  <img :src="member.image" class="hidden-img" @load="() => onProfileImageLoad(index)" />
                 </template>
               </v-img>
+              <v-skeleton-loader v-show="!profileImagesLoaded[index]" class="skeleton-profile"></v-skeleton-loader>
             </div>
-            <strong>1. Schützenmeister: </strong> Christian Name
-          </li>
-          <li>
-            <div class="profile-image">
-              <v-img src="/mann.jpg" alt="2. Schützenmeister - Andreas Name">
-                <template v-slot:placeholder>
-                  <v-skeleton-loader type="image" class="skeleton-image"></v-skeleton-loader>
-                </template>
-              </v-img>
-            </div>
-            <strong>2. Schützenmeister: </strong> Andreas Name
-          </li>
-          <li>
-            <div class="profile-image">
-              <v-img src="/mann.jpg" alt="Schatzmeister - Thomas Name">
-                <template v-slot:placeholder>
-                  <v-skeleton-loader type="image" class="skeleton-image"></v-skeleton-loader>
-                </template>
-              </v-img>
-            </div>
-            <strong>Schatzmeister: </strong> Thomas Name
+            <strong>{{ member.title }}: </strong> {{ member.name }}
           </li>
         </ul>
       </v-card-text>
@@ -79,7 +58,7 @@
       <v-card-text>
         <p>Unsere aktuelle Satzung steht Ihnen als PDF-Dokument zur Verfügung:</p>
         <br>
-        <v-btn color="primary" text href="/pdf/test.pdf" target="_blank">
+        <v-btn color="#355E3B" text href="/pdf/test.pdf" target="_blank">
           Satzung herunterladen
         </v-btn>
       </v-card-text>
@@ -88,8 +67,43 @@
 </template>
 
 <script>
+import { ref, reactive } from "vue";
+import headerImage from "@/assets/images/alterverein.jpg";
+import profile1 from "@/assets/images/mann.jpg";
+import profile2 from "@/assets/images/mann.jpg";
+import profile3 from "@/assets/images/mann.jpg";
+
 export default {
   name: "SchuetzenInfo",
+  setup() {
+    const headerImageLoaded = ref(false);
+    const profileImagesLoaded = reactive([false, false, false]);
+
+    const onHeaderImageLoad = () => {
+      console.log("✅ Header image loaded!");
+      headerImageLoaded.value = true;
+    };
+
+    const onProfileImageLoad = (index) => {
+      console.log(`✅ Profile image ${index + 1} loaded!`);
+      profileImagesLoaded[index] = true;
+    };
+
+    const boardMembers = [
+      { name: "Christian Name", title: "1. Schützenmeister", image: profile1 },
+      { name: "Andreas Name", title: "2. Schützenmeister", image: profile2 },
+      { name: "Thomas Name", title: "Schatzmeister", image: profile3 },
+    ];
+
+    return {
+      headerImage,
+      headerImageLoaded,
+      profileImagesLoaded,
+      onHeaderImageLoad,
+      onProfileImageLoad,
+      boardMembers,
+    };
+  },
 };
 </script>
 
@@ -100,29 +114,36 @@ export default {
   padding: 20px;
 }
 
-.header-image {
-  max-width: 300px;
+/* Image Wrapper */
+.image-wrapper {
+  width: 300px;
+  height: 250px;
   margin: 0 auto 20px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Skeleton Loader */
 .skeleton-image {
   width: 100%;
-  height: 250px;
+  height: 100%;
   border-radius: 8px;
+  position: absolute;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
 }
 
-.section-title {
-  font-weight: bold;
-}
-
-.section-description {
-  color: #555;
-  font-style: italic;
-}
-
+/* Board List */
 .board-list {
   padding-left: 0;
   list-style-type: none;
@@ -134,6 +155,7 @@ export default {
   margin-bottom: 16px;
 }
 
+/* Profile Image */
 .profile-image {
   width: 64px;
   height: 64px;
@@ -143,18 +165,48 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-.profile-image img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+.skeleton-profile {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  position: absolute;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
 }
 
+/* Smooth shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Hidden Image Trick */
+.hidden-img {
+  display: none;
+}
+
+/* Text Styling */
 .text-container {
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.6;
   text-align: justify;
+}
+
+.section-title {
+  font-weight: bold;
+}
+
+.section-description {
+  color: #555;
+  font-style: italic;
 }
 </style>

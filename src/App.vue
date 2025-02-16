@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <!-- Navigation Bar -->
-    <v-app-bar app color="primary" dense>
+    <v-app-bar app color="#355E3B" dense>
       <div class="navigation-wrapper">
         <v-btn text to="/" class="nav-link">Startseite</v-btn>
         <v-btn text to="/disziplinen" class="nav-link">Schießstände</v-btn>
@@ -14,17 +14,17 @@
     <!-- Emblem Section -->
     <div class="emblem-container">
       <v-img
-        src="/emblem.png"
+        :src="emblem"
+
         alt="Schützenverein Emblem"
         class="logo"
         max-width="150px"
         height="auto"
         contain
-        :lazy-src="'/emblem_small.png'"
         :aspect-ratio="1"
       >
         <template v-slot:placeholder>
-          <v-skeleton-loader type="image" class="skeleton-logo"></v-skeleton-loader>
+          <div class="custom-skeleton"></div>
         </template>
       </v-img>
     </div>
@@ -54,15 +54,24 @@
 </template>
 
 <script>
+import emblem from "@/assets/images/emblem.png";
+
+
 export default {
   name: "App",
+  data() {
+    return {
+      emblem,
+   
+    };
+  },
 };
 </script>
 
 <style scoped>
 /* Navigation Bar */
 .v-app-bar {
-  background-color: #1976d2;
+  background-color:rgb(31, 119, 44);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -86,7 +95,7 @@ export default {
 }
 
 .nav-link:hover {
-  color: #90caf9;
+  color:rgb(144, 249, 184);
 }
 
 /* Emblem Section */
@@ -107,10 +116,22 @@ export default {
   height: auto;
 }
 
-.skeleton-logo {
+.custom-skeleton {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 /* Footer */
@@ -130,7 +151,7 @@ export default {
 }
 
 .footer-link {
-  color: #90caf9;
+  color:rgb(144, 249, 195);
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -139,6 +160,7 @@ export default {
   text-decoration: underline;
 }
 
+/* Responsive Anpassungen */
 @media (max-width: 600px) {
   .navigation-wrapper {
     flex-direction: column;
@@ -155,9 +177,65 @@ export default {
   .logo {
     max-width: 80px;
   }
-  .skeleton-logo {
+  .custom-skeleton {
     width: 80px;
     height: 80px;
   }
 }
+/* Navigation Bar */
+.v-app-bar {
+  background-color: #355E3B; /* Hunter Green */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Navigation Links */
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  padding: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #4A7C59; /* Slightly lighter Hunter Green */
+}
+
+/* Footer */
+.footer {
+  background: #355E3B; /* Hunter Green */
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-link {
+  color: #90CAF9;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.v-btn {
+  background-color: #355E3B !important; /* Hunter Green */
+  color: white !important;
+  transition: background-color 0.3s ease;
+}
+
+.v-btn:hover {
+  background-color: #4A7C59 !important; /* Lighter Hunter Green */
+}
+
+/* Header Image Background */
+.schuetzen-container {
+  background-color:hsl(0, 0.00%, 96.10%); /* Light Gray Background for contrast */
+}
+
 </style>

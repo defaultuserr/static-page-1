@@ -3,35 +3,44 @@
     <!-- Willkommensbanner -->
     <v-row justify="center">
       <v-col cols="12">
-        <v-img
-          src="schützenverein.jpg"
-          alt="Schützenvereinigung Zum Eichenwald"
-          class="banner-image mb-6"
-          max-width="100%"
-          height="auto"
-          :lazy-src="'schuetzenverein_small.jpg'"
-        >
-          <template v-slot:placeholder>
-            <v-skeleton-loader type="image" class="skeleton-banner"></v-skeleton-loader>
-          </template>
-        </v-img>
+        <div class="banner-wrapper">
+          <!-- Real Image -->
+          <v-img
+            v-show="imageLoaded"
+            :src="bannerImage"
+            alt="Schützenvereinigung Zum Eichenwald"
+            class="banner-image mb-6"
+            max-width="100%"
+            height="400px"
+            contain
+          >
+            <template v-slot:default>
+              <img :src="bannerImage" class="hidden-img" @load="onImageLoad" />
+            </template>
+          </v-img>
+
+          <!-- Skeleton Loader -->
+          <v-skeleton-loader v-show="!imageLoaded" class="skeleton-banner"></v-skeleton-loader>
+        </div>
       </v-col>
     </v-row>
 
     <!-- Haupttext und Inhalte -->
     <v-row justify="center">
-      <v-col cols="12" sm="12" md="12" lg="12">
+      <v-col cols="12">
         <v-card class="welcome-card">
           <v-card-title class="text-h4 text-center font-weight-bold mb-6">
             Willkommen bei der Schützenvereinigung "Zum Eichenwald"
           </v-card-title>
           <v-card-text>
             <p class="text-body-1 text-justify mb-6">
-              Wir freuen uns, Euch auf unserer Website begrüßen zu dürfen! Hier könnt Ihr einen Einblick in unseren traditionsreichen Verein erhalten. Erfahrt mehr über unsere Angebote, Veranstaltungen und die Freude am Schießsport. Wir laden Euch herzlich ein, uns an Schießtagen zu besuchen oder uns über das Kontaktformular zu erreichen.
+              Wir freuen uns, Euch auf unserer Website begrüßen zu dürfen! Hier könnt Ihr einen Einblick in unseren traditionsreichen Verein erhalten.
+              Erfahrt mehr über unsere Angebote, Veranstaltungen und die Freude am Schießsport. Wir laden Euch herzlich ein, uns an Schießtagen zu besuchen
+              oder uns über das Kontaktformular zu erreichen.
             </p>
 
             <div class="text-center mb-6">
-              <v-btn color="primary" large href="/kontakt">Jetzt Kontakt aufnehmen</v-btn>
+              <v-btn color="#355E3B" large href="/kontakt">Jetzt Kontakt aufnehmen</v-btn>
             </div>
 
             <p class="text-body-1 text-justify mb-6">
@@ -64,10 +73,6 @@
 
             <v-divider class="my-6"></v-divider>
 
-            <h2 class="text-h5 text-center font-weight-medium mb-4">Aktuelles</h2>
-            <p class="text-body-1 text-justify mb-6">
-              <strong>Weihnachtsfeier:</strong> Am 13.12.2024 fand unsere traditionelle Weihnachtsfeier im Vereinsheim statt. Neben einer besinnlichen Geschichte und musikalischer Begleitung wurden die Schützenkönige (LG und KK) sowie der Jugendschützenkönig (LG) geehrt. Ein wunderschöner Abend für alle Beteiligten!
-            </p>
           </v-card-text>
         </v-card>
       </v-col>
@@ -76,8 +81,25 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import bannerImage from "@/assets/images/schützenverein.jpg";
+
 export default {
   name: "Home",
+  setup() {
+    const imageLoaded = ref(false);
+
+    const onImageLoad = () => {
+      console.log("✅ Image has loaded!");
+      imageLoaded.value = true;
+    };
+
+    return {
+      bannerImage,
+      imageLoaded,
+      onImageLoad,
+    };
+  },
 };
 </script>
 
@@ -88,42 +110,56 @@ export default {
   padding: 20px;
 }
 
+/* Prevent text from jumping */
+.banner-wrapper {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Real Image */
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Skeleton Loader */
+.skeleton-banner {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+  position: absolute;
+}
+
+/* Hidden Image Trick (Triggers @load) */
+.hidden-img {
+  display: none;
+}
+
+/* Smooth shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Card Styling */
 .welcome-card {
   padding: 32px;
   border-radius: 16px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
   background-color: #f9f9f9;
-}
-
-.banner-image {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-.schuetzenheim-image-large {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-.skeleton-banner, .skeleton-image {
-  width: 100%;
-  height: 300px;
-  border-radius: 16px;
-}
-
-@media (max-width: 600px) {
-  .banner-image {
-    height: 200px;
-  }
-  .skeleton-banner, .skeleton-image {
-    height: 200px;
-  }
-  .welcome-card {
-    padding: 16px;
-  }
 }
 </style>

@@ -117,7 +117,7 @@
       <v-card-text class="text-container">
         <p>Eine vollständige Übersicht aller Disziplinen des BSSB finden Sie im folgenden PDF-Dokument:</p>
         <br>
-        <v-btn color="primary" text href="https://www.bssb.de/fileadmin/Service/Regelwerke/Liste_B_2021_22-04_-_BY.pdf" target="_blank">
+        <v-btn color="#355E3B" text href="https://www.bssb.de/fileadmin/Service/Regelwerke/Liste_B_2021_22-04_-_BY.pdf" target="_blank">
           Disziplinen BSSB
         </v-btn>
       </v-card-text>

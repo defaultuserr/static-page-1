@@ -15,7 +15,7 @@
           <v-card-text>
             <p>Hier finden Sie alle geplanten Veranstaltungen und Termine für das Jahr 2025:</p>
             <br>
-            <v-btn color="primary" text href="/pdf/test.pdf" target="_blank">Terminplan 2025 herunterladen</v-btn>
+            <v-btn color="#355E3B" text href="/pdf/test.pdf" target="_blank">Terminplan 2025 herunterladen</v-btn>
           </v-card-text>
         </v-card>
 
@@ -27,7 +27,7 @@
               <li>
                 <p>Um Mitglied unseres Vereins zu werden, füllen Sie bitte den Mitgliedsantrag aus:</p>
                 <br>
-                <v-btn color="primary" text href="/pdf/test.pdf" target="_blank">Antrag auf Mitgliedschaft</v-btn>
+                <v-btn color="#355E3B" text href="/pdf/test.pdf" target="_blank">Antrag auf Mitgliedschaft</v-btn>
               </li>
             </ul>
           </v-card-text>
@@ -121,7 +121,7 @@ export default {
 
 .date {
   font-weight: bold;
-  color: #007BFF;
+  color: #355E3B;
   margin-right: 8px;
 }
 
