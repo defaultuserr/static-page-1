@@ -1,28 +1,28 @@
 <template>
   <v-container class="disziplinen-container">
-    
     <!-- Title Section -->
-    <h1 class="text-h4 section-title mb-6 text-center">
+    <h1 class="text-h4 section-title mb-6 text-center font-weight-bold">
       Schützenstände & Disziplinen
     </h1>
 
-    <p class="text-body-1 section-description text-center mb-8">
+    <p class="text-body-1 section-description text-center mb-8 font-italic">
       Entdecken Sie unsere hochmodernen Schützenstände und die Vielfalt an Disziplinen.
+      Ob Präzisionsschießen oder sportliche Wettbewerbe – hier finden Sie alle relevanten Informationen
+      zu unseren Disziplinen und Anlagen.
     </p>
 
     <v-divider class="mb-8"></v-divider>
 
     <!-- Allgemeine Informationen -->
     <v-card outlined class="mb-4">
-      
-      <v-card-title class="text-h5">Allgemeine Informationen</v-card-title>
+      <v-card-title class="text-h5 font-weight-medium">Allgemeine Informationen</v-card-title>
 
       <!-- Mindestalter -->
       <v-card class="info-section mb-6" outlined>
-        <v-card-title class="info-title">Mindestalter</v-card-title>
+        <v-card-title class="info-title font-weight-medium">Mindestalter</v-card-title>
         <v-card-text>
-          <p>Bei den Luftdruckwaffen gibt es eine Altersbeschränkung:</p>
-          <ul class="info-list">
+          <p class="text-body-1">Bei den Luftdruckwaffen gibt es eine Altersbeschränkung:</p>
+          <ul class="info-list indented-list">
             <li><strong>Luftgewehr / Luftpistole:</strong> ab 12 Jahren (mit elterlichem Einverständnis).</li>
             <li><strong>Alle anderen Waffen & Disziplinen:</strong> Volljährigkeit erforderlich.</li>
           </ul>
@@ -31,10 +31,10 @@
 
       <!-- Schießbetrieb -->
       <v-card class="info-section mb-6" outlined>
-        <v-card-title class="info-title">Schießbetrieb</v-card-title>
+        <v-card-title class="info-title font-weight-medium">Schießbetrieb</v-card-title>
         <v-card-text>
-          <p>Der Schützenverein Beispielname stellt für den Trainingsbetrieb Kurzwaffen zur Verfügung.</p>
-          <ul class="info-list">
+          <p class="text-body-1">Der Schützenverein Beispielname stellt für den Trainingsbetrieb Kurzwaffen zur Verfügung.</p>
+          <ul class="info-list indented-list">
             <li><strong>Voraussetzung:</strong> Regelmäßige Teilnahme am Schießbetrieb.</li>
             <li><strong>Vorderlader:</strong> Erfordert den Pulverschein (§27 Sprengstoffgesetz).</li>
           </ul>
@@ -43,10 +43,10 @@
 
       <!-- Sportordnungen -->
       <v-card class="info-section" outlined>
-        <v-card-title class="info-title">Sportordnungen</v-card-title>
+        <v-card-title class="info-title font-weight-medium">Sportordnungen</v-card-title>
         <v-card-text>
-          <p>Ausschlaggebend bei den Disziplinen sind immer die dazugehörigen Sportordnungen:</p>
-          <ul class="info-list">
+          <p class="text-body-1">Ausschlaggebend bei den Disziplinen sind immer die dazugehörigen Sportordnungen:</p>
+          <ul class="info-list indented-list">
             <li><strong>DSB:</strong> Deutscher Schützenbund</li>
             <li><strong>BDS:</strong> Bund Deutscher Sportschützen</li>
             <li><strong>BSSB:</strong> Bayerischer Sportschützenbund</li>
@@ -59,10 +59,7 @@
     <v-divider class="mb-8"></v-divider>
 
     <!-- Schießstände -->
-    <h2 class="category-title text-center text-h5 mb-6">
-      Unsere Schießstände
-    </h2>
-
+    <h2 class="category-title text-center text-h5 mb-6">Unsere Schießstände</h2>
     <v-row class="tight-grid mb-8">
       <v-col cols="12" md="6" lg="4" class="tight-card">
         <v-card class="stand-card">
@@ -148,6 +145,7 @@ export default {
 
 .section-description {
   color: #555;
+  font-style: italic;
 }
 
 .skeleton-image {
@@ -161,6 +159,10 @@ export default {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-bottom: 1px solid #ddd;
+}
+
+.indented-list {
+  padding-left: 20px;
 }
 
 @media (max-width: 600px) {
