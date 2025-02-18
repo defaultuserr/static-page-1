@@ -15,7 +15,7 @@
           <v-card-text>
             <p>Hier finden Sie alle geplanten Veranstaltungen und Termine für das Jahr 2025:</p>
             <br>
-            <v-btn color="#355E3B" text href="test.pdf" download>Terminplan 2025 herunterladen</v-btn>
+            <v-btn color="#355E3B" text @click="downloadTerminplan" download>Terminplan 2025 herunterladen</v-btn>
           </v-card-text>
         </v-card>
 
@@ -27,7 +27,7 @@
               <li>
                 <p>Um Mitglied unseres Vereins zu werden, füllen Sie bitte den Mitgliedsantrag aus:</p>
                 <br>
-                <v-btn color="#355E3B" text href="test.pdf" download>Antrag auf Mitgliedschaft</v-btn>
+                <v-btn color="#355E3B" text @click="downloadMitgliedschaft" download>Mitgliedsantrag herunterladen</v-btn>
               </li>
             </ul>
           </v-card-text>
@@ -72,6 +72,20 @@ export default {
         console.error("Fehler beim Laden der Termine:", error);
       });
   },
+   methods:  {
+  downloadMitgliedschaft() {
+      const link = document.createElement("a");
+      link.href = "Mitgliedsantrag.pdf"; // Adjust path if needed
+      link.download = "Mitgliedsantrag.pdf"; // Name of the downloaded file
+      link.click();
+    } ,
+    downloadTerminplan() {
+        const link = document.createElement("a");
+      link.href = "sample.pdf"; // Adjust path if needed
+      link.download = "sample.pdf"; // Name of the downloaded file
+      link.click();
+
+    }, }
 };
 </script>
 

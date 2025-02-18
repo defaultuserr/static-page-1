@@ -58,7 +58,7 @@
       <v-card-text>
         <p>Unsere aktuelle Satzung steht Ihnen als PDF-Dokument zur Verfügung:</p>
         <br>
-        <v-btn color="#355E3B" text href="test.pdf" download>
+        <v-btn color="#355E3B" text @click="downloadPDF" download>
           Satzung herunterladen
         </v-btn>
       </v-card-text>
@@ -104,6 +104,13 @@ export default {
       boardMembers,
     };
   },
+  methods:  {
+  downloadPDF() {
+      const link = document.createElement("a");
+      link.href = "sample.pdf"; // Adjust path if needed
+      link.download = "sample.pdf"; // Name of the downloaded file
+      link.click();
+    } }
 };
 </script>
 
