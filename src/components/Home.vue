@@ -90,7 +90,7 @@ export default {
     const imageLoaded = ref(false);
 
     const onImageLoad = () => {
-      console.log("✅ Image has loaded!");
+  
       imageLoaded.value = true;
     };
 
