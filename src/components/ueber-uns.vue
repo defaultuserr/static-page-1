@@ -58,7 +58,7 @@
       <v-card-text>
         <p>Unsere aktuelle Satzung steht Ihnen als PDF-Dokument zur Verfügung:</p>
         <br>
-        <v-btn color="#355E3B" text href="/files/test.pdf" target="_blank">
+        <v-btn color="#355E3B" text href="test.pdf" download>
           Satzung herunterladen
         </v-btn>
       </v-card-text>
