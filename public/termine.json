@@ -1,6 +1,421 @@
 [
-    { "date": "03.01.2025", "description": ["Training"] },
-    { "date": "10.01.2025", "description": ["Beschreibung für diesen Termin."] },
-    { "date": "24.01.2025", "description": ["Jahreshauptversammlung", "Ort: Vereinsheim", "Zeit: 18:00 Uhr"] }
-  ]
-  
+  {
+      "date": "07.01.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "14.01.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "19.01.2025",
+      "description": [
+          "Unterhebelschießen"
+      ]
+  },
+  {
+      "date": "21.01.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "28.01.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "04.02.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "11.02.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "14.02.2025",
+      "description": [
+          "Weihnachtsfeier",
+          "Ort: Vereinsheim, Zeit: 19:00 Uhr"
+      ]
+  },
+  {
+      "date": "16.02.2025",
+      "description": [
+          "Unterhebelschießen"
+      ]
+  },
+  {
+      "date": "18.02.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "25.02.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "04.03.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "11.03.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "16.03.2025",
+      "description": [
+          "Unterhebelschießen"
+      ]
+  },
+  {
+      "date": "18.03.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "25.03.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "27.03.2025",
+      "description": [
+          "Osterschießen",
+          "Ort: Schießstand, Zeit: 14:00 Uhr"
+      ]
+  },
+  {
+      "date": "01.04.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "08.04.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "15.04.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "20.04.2025",
+      "description": [
+          "Unterhebelschießen"
+      ]
+  },
+  {
+      "date": "22.04.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "29.04.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "06.05.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "13.05.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "18.05.2025",
+      "description": [
+          "Unterhebelschießen"
+      ]
+  },
+  {
+      "date": "20.05.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "27.05.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "03.06.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "10.06.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "15.06.2025",
+      "description": [
+          "Unterhebelschießen"
+      ]
+  },
+  {
+      "date": "17.06.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "20.06.2025",
+      "description": [
+          "Jahreshauptversammlung",
+          "Ort: Vereinsheim, Zeit: 18:00 Uhr"
+      ]
+  },
+  {
+      "date": "24.06.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "01.07.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "08.07.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "15.07.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "20.07.2025",
+      "description": [
+          "Unterhebelschießen"
+      ]
+  },
+  {
+      "date": "22.07.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "29.07.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "05.08.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "12.08.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "17.08.2025",
+      "description": [
+          "Unterhebelschießen"
+      ]
+  },
+  {
+      "date": "19.08.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "26.08.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "02.09.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "09.09.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "16.09.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "21.09.2025",
+      "description": [
+          "Unterhebelschießen"
+      ]
+  },
+  {
+      "date": "23.09.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "30.09.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "07.10.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "14.10.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "19.10.2025",
+      "description": [
+          "Unterhebelschießen"
+      ]
+  },
+  {
+      "date": "21.10.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "28.10.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "04.11.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "10.11.2025",
+      "description": [
+          "Sommerfest",
+          "Ort: Vereinsgelände, Zeit: 15:00 Uhr"
+      ]
+  },
+  {
+      "date": "11.11.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "16.11.2025",
+      "description": [
+          "Unterhebelschießen"
+      ]
+  },
+  {
+      "date": "18.11.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "25.11.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "02.12.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "09.12.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "16.12.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "19.12.2025",
+      "description": [
+          "Vereinsmeisterschaft",
+          "Ort: Schießstand, Zeit: 10:00 Uhr"
+      ]
+  },
+  {
+      "date": "21.12.2025",
+      "description": [
+          "Unterhebelschießen"
+      ]
+  },
+  {
+      "date": "23.12.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  },
+  {
+      "date": "30.12.2025",
+      "description": [
+          "Training (Großkaliber Kurzwaffe oder Langwaffe)"
+      ]
+  }
+]

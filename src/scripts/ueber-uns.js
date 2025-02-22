@@ -40,16 +40,13 @@ export default {
   methods: {
     async downloadSatzung() {
       // Execute your function logic
-      console.log("Opening file in a new tab!");
       const linkToStorageFile = await getUrl({
         path: "files/satzung.pdf",
   
       });
 
-      console.log('signed URL: ', linkToStorageFile.url);
-        console.log('URL expires at: ', linkToStorageFile.expiresAt);
       // Open the file in a new tab
-     // window.open("https://ampli", "_blank");
+     window.open(linkToStorageFile.url.toString(), "_blank");
     },
 
      
